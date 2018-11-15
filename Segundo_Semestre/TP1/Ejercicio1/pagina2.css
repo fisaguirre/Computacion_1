@@ -1,0 +1,53 @@
+
+.imagenes {
+  display: inline-block;
+  width: 95%;
+}
+
+.textos {
+  width: 95%;
+  border: 1px solid black;
+  /*
+    border: 1px  solid #B2FFFF;*/
+  border-top: 20px;
+  padding: 20px 19px;
+  background-color: #fff;
+  height: 230px;
+}
+
+h2 {
+
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  background: white;
+  border: 2px solid black;
+
+  word-wrap: break-word;
+    border: 2px solid #0EB4BC;
+}
+#t1{
+  width: 25%;
+}
+#t2{
+  width: 40%;
+  word-wrap: break-word;
+}
+
+#hb{
+  width: 120%;
+}
+
+h3 {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+a {
+  color: black;
+  font-size: 18px;
+  font-weight: 800;
+}
+#a1{
+  color: red;
+}
