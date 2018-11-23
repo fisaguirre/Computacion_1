@@ -25,7 +25,6 @@ void Domicilio::agregar()
   values << this->getCalle() << "','" << this->getNumero();
   stringSQL = "INSERT INTO domicilio (calle,numero) VALUES ('"+values.str()+"');";
   MyConnection::instance()->execute(stringSQL);
-  this->inicio();
 }
 
 void Domicilio::inicio(){
@@ -37,9 +36,9 @@ void Domicilio::inicio(){
     cout<<"<div class='centrar'><h2>Agregar Domicilio</h2></div>"<<endl;
     cout<<"<form  method='post'>"<<endl;
     cout<<"<label for='calle'>Calle</label>"<<endl;
-    cout<<"<input type='text' id='calle' name='calle'>"<<endl;
+    cout<<"<input type='text' id='calle' name='calle' required>"<<endl;
     cout<<"<label for='numero'>Numero</label>"<<endl;
-    cout<<"<input type='text' id='numero' name='numero'>"<<endl;
+    cout<<"<input type='text' id='numero' name='numero' required>"<<endl;
     cout<<"<br>"<<endl;
     cout<<"<br>"<<endl;
     cout<<"<button name='button_agregar_domicilio' type='submit'>Enviar</button>"<<endl;
@@ -64,8 +63,10 @@ void Domicilio::asignar(string id_persona){
   cout << "<input type='hidden' name='id_persona' value=" + id_persona + ">"<<endl;
   cout <<"Domicilio: " << endl;
   cout << "<select name='sel_id_domicilio'>" << endl;
+
   while(domicilios->next())
   {
+
     cout << "<option value="+domicilios->getString("id")+">"+domicilios->getString("calle")+"-"+domicilios->getString("numero")+"</option>" << endl;
   }
   cout << "</select>" << endl;

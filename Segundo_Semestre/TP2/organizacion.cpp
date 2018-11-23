@@ -24,7 +24,6 @@ void Organizacion::agregar()
     values << this->getNombre();
     stringSQL = "INSERT INTO organizacion (nombre) VALUES ('"+values.str()+"');";
     MyConnection::instance()->execute(stringSQL);
-    this->inicio();
 }
 
 void Organizacion::inicio(){
