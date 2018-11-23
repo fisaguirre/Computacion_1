@@ -75,9 +75,6 @@ int main (int argc, char* const argv[]) {
     string id_persona=Post["id_persona"];
     string id_organizacion=Post["sel_idorganizacion"];
     organizacion.cambiar(id_persona, id_organizacion);
-    (new Persona())->inicio();
-    (new Organizacion())->inicio();
-    (new Domicilio())->inicio();
   }
 
   if(Post.find("button_asignar_domicilio")!=Post.end())
@@ -87,21 +84,10 @@ int main (int argc, char* const argv[]) {
     string id_persona=Post["id_persona"];
     string id_domicilio=Post["sel_id_domicilio"];
     domicilio.cambiar(id_persona, id_domicilio);
-    (new Persona())->inicio();
-    (new Organizacion())->inicio();
-    (new Domicilio())->inicio();
   }
 
 
 
-  if(Post.find("button_agregar_organizacion")==Post.end() && Post.find("button_agregar_persona")==Post.end() && Post.find("button_agregar_domicilio")==Post.end() && Post.find("button_modificar_form")==Post.end() && Post.find("button_asignar_organizacion_form")==Post.end() && Post.find("button_asignar_organizacion_form")==Post.end())
-  {
-    cout << "empieza 1" << endl;
-    (new Persona())->inicio();
-    (new Organizacion())->inicio();
-    (new Domicilio())->inicio();
-    cout << "termina 1" << endl;
-  }
 
 /*
   if(Post.find("button_agregar_persona")!=Post.end() && Post.find("button_agregar_organizacion")==Post.end() && Post.find("button_agregar_domicilio")==Post.end() && Get.find("modificar_id")==Get.end() && Get.find("asignarorg_idpersona")==Get.end() && Get.find("asignardom_idpersona")==Get.end())
@@ -137,11 +123,17 @@ int main (int argc, char* const argv[]) {
   //  string dom=Post["dom"];
   //  persona.modificar(i,d,n,a,o,dom);
     persona.modificar(i,d,n,a);
-    (new Persona())->inicio();
-    (new Organizacion())->inicio();
-    (new Domicilio())->inicio();
+
 
   }
+
+
+    if(Post.find("button_agregar_organizacion")==Post.end() && Post.find("button_agregar_persona")==Post.end() && Post.find("button_agregar_domicilio")==Post.end() && Post.find("button_modificar_form")==Post.end() && Post.find("button_asignar_organizacion_form")==Post.end() && Post.find("button_asignar_domicilio_form")==Post.end())
+    {
+      (new Persona())->inicio();
+      (new Organizacion())->inicio();
+      (new Domicilio())->inicio();
+    }
 
 
 
@@ -156,11 +148,9 @@ int main (int argc, char* const argv[]) {
 
   if(Post.find("button_agregar_persona")!=Post.end() && Post.find("button_agregar_organizacion")==Post.end() && Post.find("button_agregar_domicilio")==Post.end() && Post.find("button_modificar_form")==Post.end() && Post.find("button_asignar_organizacion_form")==Post.end() && Post.find("button_asignar_domicilio_form")==Post.end())
   {
-    cout << "empieza 3" << endl;
     (new Persona())->inicio();
     (new Organizacion())->inicio();
     (new Domicilio())->inicio();
-    cout << "termina 3" << endl;
   }
 
 
@@ -175,13 +165,9 @@ int main (int argc, char* const argv[]) {
 
     if(Post.find("button_agregar_organizacion")!=Post.end() && Post.find("button_agregar_persona")==Post.end() && Post.find("button_agregar_domicilio")==Post.end() && Post.find("button_modificar_form")==Post.end() && Post.find("button_asignar_organizacion_form")==Post.end() && Post.find("button_asignar_domicilio_form")==Post.end())
     {
-      cout << "empieza 2" << endl;
-
       (new Persona())->inicio();
       (new Organizacion())->inicio();
       (new Domicilio())->inicio();
-      cout << "termina 2" << endl;
-
     }
 
 
@@ -195,13 +181,9 @@ int main (int argc, char* const argv[]) {
 
   if(Post.find("button_agregar_domicilio")!=Post.end() && Post.find("button_agregar_persona")==Post.end() && Post.find("button_agregar_organizacion")==Post.end() && Post.find("button_modificar_form")==Post.end() && Post.find("button_asignar_organizacion_form")==Post.end() && Post.find("button_asignar_domicilio_form")==Post.end())
   {
-    cout << "empieza 4" << endl;
-
     (new Persona())->inicio();
     (new Organizacion())->inicio();
     (new Domicilio())->inicio();
-
-    cout << "termina 4" << endl;
   }
 
 

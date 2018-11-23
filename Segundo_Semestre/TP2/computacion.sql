@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 15-11-2018 a las 13:03:57
+-- Tiempo de generación: 23-11-2018 a las 17:37:19
 -- Versión del servidor: 5.7.24-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.32-0ubuntu0.16.04.1
 
@@ -38,9 +38,13 @@ CREATE TABLE `domicilio` (
 
 INSERT INTO `domicilio` (`id`, `calle`, `numero`) VALUES
 (1, 'vargas', '1230'),
-(2, 'chaco', '3245'),
 (3, 'italia', '55'),
-(6, 'rodriguez ', '5000');
+(4, 'San Juan', '500'),
+(5, 'San Martin', '1200'),
+(7, 'Salta', '132'),
+(13, 'Peru', '1000'),
+(16, 'Rioja', '500'),
+(17, 'España', '945');
 
 -- --------------------------------------------------------
 
@@ -62,7 +66,9 @@ INSERT INTO `organizacion` (`id`, `nombre`) VALUES
 (2, 'Facebook'),
 (3, 'Amazon'),
 (4, 'Booking'),
-(5, 'Uber');
+(5, 'Uber'),
+(6, 'Snapchat'),
+(7, 'Spotify');
 
 -- --------------------------------------------------------
 
@@ -76,7 +82,7 @@ CREATE TABLE `persona` (
   `apellido` varchar(45) DEFAULT NULL,
   `dni` varchar(45) DEFAULT NULL,
   `idorganizacion` int(11) DEFAULT NULL,
-  `iddomicilio` int(11) NOT NULL DEFAULT '1'
+  `iddomicilio` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -84,12 +90,12 @@ CREATE TABLE `persona` (
 --
 
 INSERT INTO `persona` (`id`, `nombre`, `apellido`, `dni`, `idorganizacion`, `iddomicilio`) VALUES
-(2, 'Eduardo', 'Rodriguez', '31469062', 1, 1),
 (4, 'Maria', 'Martinez', '32768456', 2, 1),
-(7, 'Ernesto', 'Alvarez', '29889123', 5, 1),
-(129, 'Andres', 'Lopez', '28558461', 3, 1),
-(133, 'Andrew', 'Godwin', '32768451', 1, 1),
-(138, 'Laura', 'Perez', '92812023', 1, 6);
+(129, 'Andres', 'Lopez', '28558461', 3, 13),
+(133, 'Andrew', 'Godwin', '123456789', 1, 4),
+(146, 'Fernando', 'Isaguirre', '39088047', 1, 3),
+(159, 'Federico', 'Noya', '43255315', NULL, NULL),
+(160, 'Armando', 'Lugares', '432546789', NULL, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -121,17 +127,17 @@ ALTER TABLE `persona`
 -- AUTO_INCREMENT de la tabla `domicilio`
 --
 ALTER TABLE `domicilio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT de la tabla `organizacion`
 --
 ALTER TABLE `organizacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT de la tabla `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=166;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

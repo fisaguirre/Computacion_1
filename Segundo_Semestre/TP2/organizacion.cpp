@@ -40,8 +40,6 @@ void Organizacion::inicio(){
     cout<<"<br>"<<endl;
     cout<<"<br>"<<endl;
     cout<<"<button name='button_agregar_organizacion' type='submit'>Enviar</button>"<<endl;
-    cout << "<a href='TP2'" << endl;
-    cout << ">Volver</a>"<<endl;
     cout<<"</form>"<<endl;
     cout<<"</div></body></html>"<<endl;
 
